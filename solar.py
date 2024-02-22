@@ -54,7 +54,7 @@ def irradiance_trigo(dni, dhi, ghi, solar_angle, solar_azimuth, facade_azimuth, 
     else:
         direct_component = 0
     b = dhi * ((1 + math.cos(90 * (math.pi / 180))) / 2) + (
-                (dhi * math.sin(elevation_rad)) / 2)  # radiateur diffuse isotrope + diffusion vers le bas
+                (dhi * math.sin(elevation_rad)) / 2)  # diffuse isotrope + diffusion vers le bas
     c = ghi * rho * ((1 - math.cos(elevation_rad)) / 2)
     diffuse = b + c
     irr = direct_component + diffuse
